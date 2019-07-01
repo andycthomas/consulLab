@@ -1,0 +1,18 @@
+---
+- hosts: all
+
+  gather_facts: False
+
+  vars_files:
+    - "variables.yaml"
+
+  tasks:
+    - name: Teardown application directory
+      file:
+        path: "{{ application_dir }}"
+        state: absent
+
+
+
+
+

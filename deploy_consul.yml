@@ -1,0 +1,49 @@
+---
+- hosts: cluster
+
+  gather_facts: False
+
+  vars_files:
+    - "variables.yaml"
+
+  tasks:
+    - name: Create application directory
+      file:
+        path: "{{ application_dir }}"
+        state: directory
+
+    - name: Create log directory
+      file:
+        path: "{{ log_dir }}"
+        state: directory
+
+    - name: Create configuration directory
+      file:
+        path: "{{ config_dir }}"
+        state: directory
+
+    - name: Create acl configuration directory
+      file:
+        path: "{{ acl_dir }}"
+        state: directory
+
+    - name: Create certificates directory
+      file:
+        path: "{{ certificates_dir }}"
+        state: directory
+
+    - name: Download the consul zip file
+      get_url:
+        url: "{{ consul_download_url }}"
+        dest: "{{ consul_zipPath }}"
+
+    - name: Unzip the file
+      unarchive:
+        src: "{{ consul_zipPath}}"
+        dest: "{{ application_dir }}"
+        remote_src: yes
+  
+
+
+
+

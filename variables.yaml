@@ -1,0 +1,9 @@
+---
+application_dir:  "/home/vagrant/ges/entitlements/tools/consul"
+config_dir:       "/home/vagrant/ges/entitlements/tools/consul/consul.d"
+acl_dir:          "/home/vagrant/ges/entitlements/tools/consul/acl_config"
+certificates_dir: "/home/vagrant/ges/entitlements/tools/consul/certificates" 
+log_dir: ""/home/vagrant/ges/entitlements/logs"
+consul_download_url:  "https://releases.hashicorp.com/consul/1.5.2/consul_1.5.2_linux_386.zip"
+consul_zipPath:       "/home/vagrant/ges/entitlements/tools/consul/consul_1.5.2_linux_386.zip"
+
